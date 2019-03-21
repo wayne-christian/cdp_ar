@@ -5,18 +5,27 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-    <a-assets>
+   <!-- <a-assets>
       <a-asset-item id="model" src="assets/model/scene.gltf"></a-asset-item>
-    </a-assets>
+    </a-assets>-->
   	<a-marker-camera type='pattern' url='assets/marker/pattern-marker.patt'>
-      <a-entity gltf-model="#model" rotation= "180 0 0">
+<!--      <a-entity gltf-model="#model" rotation= "180 0 0">
         <a-animation attribute="position"
           dur="5000"
           direction="alternate"
           from="0 1 0"
           to="0 5 0"
           repeat="indefinite"></a-animation>
-      </a-entity>
+      </a-entity>-->
+      <a-box position='0 1 0' material='color: red;'>
+        <a-animation attribute="rotation"
+          dur="2000"
+          fill="forwards"
+          from="0 0 0"
+          to="360 360 360"
+          repeat="indefinite"></a-animation>
+      </a-box>
+ 
   	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
